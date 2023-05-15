@@ -2,7 +2,7 @@
 
 ## Contare quanti iscritti ci sono stati ogni anno
 
-> SELECT YEAR(`enrolment_date`) AS `year`, COUNT(\*) AS `exams_number`  
+> SELECT YEAR(`enrolment_date`) AS `year`, COUNT(\*) AS `enrolment_numeber`  
 > FROM `students`  
 > GROUP BY YEAR(`enrolment_date`)
 
