@@ -5,13 +5,15 @@
 > SELECT `students`.`name` AS `student_name`, `students`.`surname` AS `student_surname`  
 > FROM `students`  
 > JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`  
-> WHERE `degrees`.`name`= 'Corso di Laurea in Economia'
+> WHERE `degrees`.`name`= 'Corso di Laurea in Economia';
 
 ## Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
 
-> .  
-> .  
-> .
+> SELECT `degrees`.`name` AS 'degree_name'  
+> FROM `degrees`  
+> JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`  
+> WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'  
+> AND `degrees`.`level` = 'magistrale';
 
 ## Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 
