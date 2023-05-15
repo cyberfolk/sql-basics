@@ -8,9 +8,9 @@
 
 ## Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
-> .  
-> .  
-> .
+> SELECT `office_address` AS `addres`, COUNT(\*) AS `shared_number`  
+> FROM `teachers`  
+> GROUP BY `office_address`
 
 ## Calcolare la media dei voti di ogni appello d'esame
 
