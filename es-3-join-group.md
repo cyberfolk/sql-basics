@@ -22,9 +22,10 @@ _?? Not sure ??_
 
 ## Contare quanti corsi di laurea ci sono per ogni dipartimento
 
-> .  
-> .  
-> .
+> SELECT `departments`.`name` AS `department_name`, COUNT(`degrees`.`id`) AS `degrees_number`  
+> FROM `departments`  
+> JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`  
+> GROUP BY `departments`.`id`
 
 # JOIN
 
