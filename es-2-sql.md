@@ -14,7 +14,8 @@
 
 > SELECT \*  
 > FROM `students`  
-> WHERE YEAR(`date_of_birth`) < "1983";
+> ~~WHERE YEAR(`date_of_birth`) < "1983";~~
+> WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30;
 
 ## Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
@@ -44,6 +45,7 @@
 
 ## Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-> SELECT `*`  
+> SELECT COUNT(`id`)  
+> AS `total_teachers_no_phone`
 > FROM `teachers`  
 > WHERE ISNULL(`phone`);
