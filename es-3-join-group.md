@@ -8,7 +8,7 @@
 
 ## Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
-> SELECT `office_address` AS `addres`, COUNT(\*) AS `shared_number`  
+> SELECT `office_address` AS `address`, COUNT(\*) AS `shared_number`  
 > FROM `teachers`  
 > GROUP BY `office_address`
 
@@ -22,7 +22,7 @@ _?? Not sure ??_
 
 ## Contare quanti corsi di laurea ci sono per ogni dipartimento
 
-> SELECT `departments`.`name` AS `department_name`, COUNT(`degrees`.`id`) AS `degrees_number`  
+> SELECT `departments`.`name` AS `department_name`, COUNT(`degrees`.`id`) AS `degree_number`  
 > FROM `departments`  
 > JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`  
 > GROUP BY `departments`.`id`
