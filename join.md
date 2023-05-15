@@ -52,6 +52,10 @@
 
 ## BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
 
-> .  
-> .  
-> .
+> Select `students`.`surname` AS `student_surname`, `students`.`name` AS `student_name`, `courses`.`name`, COUNT(\*)
+> FROM `exam_student`
+> JOIN `students`ON `exam_student`.`student_id` = `students`.`id`
+> JOIN `exams`ON `exam_student`.`exam_id` = `exams`.`id`
+> JOIN `courses`ON `exams`.`course_id`=`courses`.`id`
+> GROUP BY `students`.`surname`, `students`.`name` , `courses`.`name`
+> ORDER BY `students`.`surname` ASC, `students`.`name` ASC;
