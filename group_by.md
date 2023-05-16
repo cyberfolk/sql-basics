@@ -14,9 +14,7 @@
 
 ## Calcolare la media dei voti di ogni appello d'esame
 
-_?? Not sure ??_
-
-> SELECT `exam_id`, AVG(`vote`)  
+> SELECT `exam_id`, AVG(`vote`) AS `vote_avg`
 > FROM `exam_student`  
 > GROUP BY `exam_id`
 
